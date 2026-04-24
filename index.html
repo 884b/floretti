@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Home</title>
+</head>
+
+<body>
+    <div class="hero">
+        <div class="hero-top">
+            <img class="corner" src="/assets/i_topleft.svg" width="50">
+            <div class="header-right">
+                <a href="cart.html"><img src="/assets/i_cart.svg" height="50"> </a>
+                <button class="b-menu" onclick="openMenu()"><img src="/assets/i_burger.svg" height="50"></button>
+            </div>
+        </div>
+
+        <img class=herologo src="/assets/logo_wordplus_home.svg" height="150px">
+
+        <div class="hero-bot">
+            <p>WAIHEKE ISLAND, NZ</p>
+            <img class="corner" src="/assets/i_botright.svg" width="50">
+        </div>
+    </div>
+
+    <div class="about-break">
+        <div class="about-text">
+            <h2>ABOUT US</h2>
+            <p>Founded in 2026, Floretti is a boutique floral studio <br> that specializes in arrangements and event
+                styling
+                on Waiheke Island.</p>
+        </div>
+    </div>
+
+    <div class="gallery">
+        <div class="slideL event1"></div>
+        <div class="slideL event2"></div>
+        <div class="slideL event3"></div>
+        <div class="slideL event4"></div>
+
+        <div class="gallery-text">
+            <h1><a href="gallery.html">Events</a></h1>
+        </div>
+    </div>
+
+    <div class="support-break">
+        <div class="support-text">
+            <h2>OUR SUPPORTERS</h2>
+            <p>Floretti is proudly supported by venues such as <br>Mudbrick Vineyard, Tantalus, & Man O' War.</p>
+        </div>
+    </div>
+
+    <div class="gallery">
+        <div class="slideR bouq1"></div>
+        <div class="slideR bouq2"></div>
+        <div class="slideR bouq3"></div>
+        <div class="slideR bouq4"></div>
+
+        <div class="gallery-text">
+            <h1><a href="shop.html">Bouquets</a></h1>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-content">
+
+            <div class="footer-left">
+                <a href="index.html"><img class="logo" src="/assets/logo_word_pink.svg" width="200"></a>
+            </div>
+
+            <div class="footer-right">
+                <a href="https://instagram.com/florettifloral" target="_blank">
+                    <i class="fa fa-instagram" style="font-size: 30px; color:#FFF4B3;"></i>
+                </a>
+                <a href="https://facebook.com/florettifloral" target="_blank">
+                    <i class="fa fa-facebook-square" style="font-size: 30px; color:#FFF4B3;"></i>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div id="burgerMenu" class="burgerreveal">
+        <nav>
+            <a href="index.html">home</a>
+            <a href="#">book a wedding</a>
+            <a href="#">book an event</a>
+            <a href="#">shop</a>
+            <a href="#">gallery</a>
+            <a href="#">about</a>
+            <a href="#">contact</a>
+        </nav>
+        <button class="b-menu" onclick="closeMenu()"><img src="/assets/i_arrow.svg"></button>
+    </div>
+
+    <script src="/js/scripts.js"></script>
+</body>
+
+</html>

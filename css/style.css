@@ -1,0 +1,365 @@
+body {
+    font-family: "Inter", sans-serif;
+    color: #F9F9F9;
+    background-color: #F9F9F9;
+    font-weight: 200;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: LightRock;
+    src: url(/assets/f_lightrock.otf);
+    font-display: block;
+}
+
+/* Light Rock is free for personal use.  While I intend to
+use this site commercially, for now, it's simply a school
+project.  I've also already purchased a commercial multi-use
+license for this font, and can provide evidence if needed. */
+
+.hero {
+    background-image: url(/assets/p_hero.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 70px;
+    height: 80vh;
+}
+
+
+.hero-top {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* .header {
+    width: 100%;
+    background-color: #F9F9F9;
+    padding: 25px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+} */
+
+.header-right {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header-right img:hover {
+    opacity: 70%;
+    transition: all 0.4s ease;
+}
+
+.b-menu {
+    background: none;
+    border: none;
+    font-size: 24px;
+}
+
+.b-menu:hover {
+    opacity: 70%;
+    transition: all 0.4s ease;
+}
+
+.herologo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #F9F9F9;
+}
+
+.hero-bot {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.about-break {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 30vh;
+    background-color: #F9F9F9;
+    color: #121212;
+    text-align: left;
+}
+
+.about-text {
+    padding: 70px;
+}
+
+.about-text h2 {
+    font-weight: 300
+}
+
+.support-break {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 30vh;
+    background-color: #F9F9F9;
+    color: #121212;
+    text-align: right;
+}
+
+
+.support-text {
+    padding: 70px;
+}
+
+.support-text h2 {
+    font-weight: 300
+}
+
+/* was having trouble adding padding to
+the about us section, i put the content
+into another div and it resolved my issue */
+
+.gallery {
+    position: relative;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.gallery::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+    z-index: 1;
+}
+
+.gallery-text {
+    position: relative;
+    z-index: 2;
+    color: #F9F9F9;
+    text-align: center;
+    top: 40%;
+}
+
+.gallery-text h1 {
+    line-height: 0.1;
+    font-family: LightRock;
+    font-weight: 100;
+    font-size: 80px;
+    transition: all 0.3s ease;
+}
+
+.gallery-text a {
+    text-decoration: none;
+    color: #F9F9F9;
+    transition: all 0.3s ease;
+}
+
+.gallery-text h1:hover {
+    transform: translateY(-4px);
+}
+
+.slideL {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: slideL 12s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.slideR {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: slideR 12s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.event1 {
+    background-image: url(/gallery/mk-1.jpg);
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+}
+
+.event2 {
+    background-image: url(/gallery/mk-6.jpg);
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+.event3 {
+    background-image: url(/gallery/mk-2.jpg);
+    animation-delay: 6s;
+    animation-fill-mode: forwards;
+    background-position: center 70%;
+}
+
+.event4 {
+    background-image: url(/gallery/mk-4.jpg);
+    animation-delay: 9s;
+    animation-fill-mode: forwards;
+    background-position: center 10%;
+}
+
+/* Above is events, below is bouquets */
+
+
+.bouq1 {
+    background-image: url(/gallery/b-1.JPG);
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    background-position: center 20%;
+}
+
+.bouq2 {
+    background-image: url(/gallery/b-2.JPG);
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+    background-position: center 40%;
+}
+
+.bouq3 {
+    background-image: url(/gallery/b-3.JPG);
+    animation-delay: 6s;
+    animation-fill-mode: forwards;
+}
+
+.bouq4 {
+    background-image: url(/gallery/b-5.JPG);
+    animation-delay: 9s;
+    animation-fill-mode: forwards;
+    background-position: center 20%;
+}
+
+@keyframes slideL {
+    0% {
+        opacity: 1;
+        transform: translateX(0) scale(1.1);
+    }
+
+    24.999999% {
+        opacity: 1;
+        transform: translateX(-20px) scale(1.1);
+    }
+
+    25% {
+        opacity: 0;
+        transform: translateX(-20px) scale(1.1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(-20px) scale(1.1);
+    }
+}
+
+@keyframes slideR {
+    0% {
+        opacity: 1;
+        transform: translateX(0) scale(1.1);
+    }
+
+    24.999999% {
+        opacity: 1;
+        transform: translateX(20px) scale(1.1);
+    }
+
+    25% {
+        opacity: 0;
+        transform: translateX(20px) scale(1.1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(20px) scale(1.1);
+    }
+}
+
+.footer {
+    background-color: #121212;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    height: 30vh;
+    width: 100%;
+}
+
+.footer-content {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-right {
+    width: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* Below is the burger menu CSS, leave
+this at the bottom. */
+
+.burgerreveal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #F9F9F9;
+    color: #121212;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    opacity: 0;
+    z-index: -5;
+    transform: translateX(5%);
+    transition: z-index 0.2s, opacity 0.3s, transform 0.5s ease;
+}
+
+.burgerreveal.show {
+    transform: translateX(0);
+    opacity: 1;
+    z-index: 5;
+}
+
+/* z-index transition is causing lag in
+my live preview, but is seemingly the
+easiest way to achieve the transition
+i want */
+
+.burgerreveal nav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: left;
+}
+
+.burgerreveal a {
+    color: #121212;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 200;
+}
+
+.burgerreveal nav a:hover {
+    color: #493780;
+    transition: all 0.4s ease;
+}
