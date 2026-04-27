@@ -117,6 +117,24 @@ license for this font, and can provide evidence if needed. */
     text-align: right;
 }
 
+@media (max-width: 640px) {
+    .support-break {
+        text-align: center;
+    }
+
+    br {
+        display: none;
+    }
+
+    .about-break {
+        text-align: center;
+    }
+
+    br {
+        display: none;
+    }
+
+}
 
 .support-text {
     padding: 70px;
@@ -128,7 +146,8 @@ license for this font, and can provide evidence if needed. */
 
 /* was having trouble adding padding to
 the about us section, i put the content
-into another div and it resolved my issue */
+into another div and it resolved my issue.
+probably not proper though... sorry! */
 
 .gallery {
     position: relative;
@@ -169,6 +188,8 @@ into another div and it resolved my issue */
 .gallery-text h1:hover {
     transform: translateY(-4px);
 }
+
+/* SLIDER ANIMATION START */
 
 .slideL {
     position: absolute;
@@ -247,6 +268,11 @@ into another div and it resolved my issue */
     background-position: center 30%;
 }
 
+/* note for upcoming code, i believe that
+the accuracy of the 2nd keyframe is causing 
+lag on certain clients. my safari can't 
+load the showcase without stuttering. */
+
 @keyframes slideL {
     0% {
         opacity: 1;
@@ -291,12 +317,12 @@ into another div and it resolved my issue */
     }
 }
 
-/* Besides the header, content above is for the homepage */
+/* SLIDER ANIMATION END */
 
 .shop {
     width: 80%;
     display: grid;
-    grid-template-columns: repeat(3, 200px);
+    grid-template-columns: repeat(3, 250px);
     justify-content: center;
     gap: 2rem 4rem;
     color: #121212;
@@ -325,7 +351,7 @@ into another div and it resolved my issue */
     font-size: small;
 }
 
-/* Below is the inquiry styling */
+/* Below is the wedding / event form styling */
 
 .formcontent {
     display: flex;
@@ -347,13 +373,16 @@ into another div and it resolved my issue */
     flex-direction: column;
 }
 
-.formleft h2 {
-    font-weight: 300;
+.formleft h1 {
+    font-size: 50px;
+    font-weight: 100;
+    font-family: LightRock;
     margin-top: 0;
+    margin-bottom: 0px;
 }
 
 .formright {
-    width: 50%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -396,8 +425,45 @@ select {
 }
 
 .formcontent button:hover {
-    color: #FFF4B3;
+    opacity: 75%;
 }
+
+@media (max-width: 1024px) {
+    .formcontent {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        gap: 2rem;
+        padding: 0px;
+        margin-bottom: 60px;
+        text-align: center;
+    }
+
+    .formright {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    form {
+        width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .formright {
+        width: 70%;
+    }
+
+    .formleft {
+        width: 70%;
+    }
+
+    .formleft h1 {
+        font-size: 50px;
+    }
+}
+
 
 label {
     display: block;
@@ -421,10 +487,6 @@ label {
 @media (max-width: 1024px) {
     .shop {
         grid-template-columns: repeat(2, 200px);
-    }
-
-    .footer .logo {
-        width: 120px;
     }
 }
 
@@ -452,9 +514,10 @@ label {
     }
 }
 
-/* there's a lot of different media queries in here,
-i thought i had to lump everything into one until
-i made the wedding inquiry page... sorry... */
+/* this was my first time using @media,
+there's a few things lumped together here,
+that's because thought i could only use 
+@media once... sorry... */
 
 .product-container {
     display: flex;
@@ -499,11 +562,12 @@ i made the wedding inquiry page... sorry... */
 
 .product-right a {
     text-decoration: none;
-    color: #121212
+    color: #121212;
 }
 
 .i-soldout {
     margin-top: auto;
+    pointer-events: none;
 }
 
 @media (max-width: 1024px) {
@@ -543,6 +607,8 @@ i made the wedding inquiry page... sorry... */
         margin-bottom: -10px;
     }
 }
+
+/* Product page end // Cart page start */
 
 .cart-content {
     color: #121212;
@@ -586,6 +652,8 @@ i made the wedding inquiry page... sorry... */
     }
 }
 
+/* Footer start */
+
 .footer {
     background-color: #121212;
     display: flex;
@@ -605,6 +673,10 @@ i made the wedding inquiry page... sorry... */
     align-items: center;
 }
 
+.footer-left img {
+    max-width: 100%;
+}
+
 .footer-right {
     width: 7rem;
     display: flex;
@@ -612,8 +684,13 @@ i made the wedding inquiry page... sorry... */
     justify-content: space-around;
 }
 
-/* Below is the burger menu CSS, leave
-this at the bottom. */
+@media (max-width: 640px) {
+    .footer-left img {
+        max-width: 70%;
+    }
+}
+
+/* Burger menu start */
 
 .burgerreveal {
     position: fixed;
