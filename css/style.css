@@ -5,6 +5,8 @@ body {
     font-weight: 200;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 @font-face {
@@ -37,14 +39,15 @@ license for this font, and can provide evidence if needed. */
     align-items: center;
 }
 
-/* .header {
-    width: 100%;
+.header {
     background-color: #F9F9F9;
-    padding: 25px;
+    padding: 70px;
+    height: 60px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-} */
+    margin: 0 auto;
+}
 
 .header-right {
     width: 100%;
@@ -173,7 +176,7 @@ into another div and it resolved my issue */
     background-size: cover;
     background-position: center;
     opacity: 0;
-    animation: slideL 12s;
+    animation: slideL 16s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
@@ -184,7 +187,7 @@ into another div and it resolved my issue */
     background-size: cover;
     background-position: center;
     opacity: 0;
-    animation: slideR 12s;
+    animation: slideR 16s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
@@ -197,26 +200,25 @@ into another div and it resolved my issue */
 
 .event2 {
     background-image: url(/gallery/mk-6.jpg);
-    animation-delay: 3s;
+    animation-delay: 4s;
     animation-fill-mode: forwards;
 }
 
 .event3 {
     background-image: url(/gallery/mk-2.jpg);
-    animation-delay: 6s;
+    animation-delay: 8s;
     animation-fill-mode: forwards;
     background-position: center 70%;
 }
 
 .event4 {
     background-image: url(/gallery/mk-4.jpg);
-    animation-delay: 9s;
+    animation-delay: 12s;
     animation-fill-mode: forwards;
     background-position: center 10%;
 }
 
 /* Above is events, below is bouquets */
-
 
 .bouq1 {
     background-image: url(/gallery/b-1.JPG);
@@ -226,23 +228,23 @@ into another div and it resolved my issue */
 }
 
 .bouq2 {
-    background-image: url(/gallery/b-2.JPG);
-    animation-delay: 3s;
+    background-image: url(/gallery/s-1.JPG);
+    animation-delay: 4s;
     animation-fill-mode: forwards;
-    background-position: center 40%;
+    background-position: center 10%;
 }
 
 .bouq3 {
     background-image: url(/gallery/b-3.JPG);
-    animation-delay: 6s;
+    animation-delay: 8s;
     animation-fill-mode: forwards;
 }
 
 .bouq4 {
-    background-image: url(/gallery/b-5.JPG);
-    animation-delay: 9s;
+    background-image: url(/gallery/s-6.JPG);
+    animation-delay: 12s;
     animation-fill-mode: forwards;
-    background-position: center 20%;
+    background-position: center 30%;
 }
 
 @keyframes slideL {
@@ -289,14 +291,310 @@ into another div and it resolved my issue */
     }
 }
 
+/* Besides the header, content above is for the homepage */
+
+.shop {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    justify-content: center;
+    gap: 2rem 4rem;
+    color: #121212;
+    margin: 0 auto;
+    padding: 2rem 0;
+    margin-bottom: 60px;
+}
+
+.card {
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-text {
+    display: flex;
+    justify-content: space-between;
+    font-size: small;
+}
+
+/* Below is the inquiry styling */
+
+.formcontent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5rem;
+    padding: 70px;
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+
+}
+
+.formleft {
+    color: #121212;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.formleft h2 {
+    font-weight: 300;
+    margin-top: 0;
+}
+
+.formright {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 300px;
+}
+
+input {
+    padding: 10px;
+    background-color: #F9F9F9;
+    color: #121212;
+    border: none;
+    border-bottom: 1px solid #121212;
+    font-size: 14px;
+    font-weight: 200;
+    box-sizing: border-box;
+}
+
+select {
+    padding: 10px;
+    border: 2px solid black;
+    font-size: 16px;
+}
+
+.formcontent button {
+    cursor: pointer;
+    background-color: #F9F9F9;
+    border: none;
+    border-bottom: 1px solid #493780;
+    color: #493780;
+    padding: 10px;
+    font-size: 14px;
+    text-align: left;
+    transition: all 0.4s ease;
+}
+
+.formcontent button:hover {
+    color: #FFF4B3;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+#weddingMessage {
+    margin-top: 12px;
+    color: #493780;
+    font-weight: 300;
+}
+
+#eventMessage {
+    margin-top: 12px;
+    color: #493780;
+    font-weight: 300;
+}
+
+
+@media (max-width: 1024px) {
+    .shop {
+        grid-template-columns: repeat(2, 200px);
+    }
+
+    .footer .logo {
+        width: 120px;
+    }
+}
+
+@media (max-width: 640px) {
+    .shop {
+        grid-template-columns: repeat(2, 120px);
+        gap: 2rem 2rem;
+    }
+
+    .header {
+        padding: 52.5px;
+        height: 45px;
+    }
+
+    .header .logo {
+        width: 120px;
+    }
+
+    .header-right img {
+        height: 37.5px;
+    }
+
+    .b-menu img {
+        height: 37.5px;
+    }
+}
+
+/* there's a lot of different media queries in here,
+i thought i had to lump everything into one until
+i made the wedding inquiry page... sorry... */
+
+.product-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: #121212;
+    padding: 70px auto;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 120px;
+}
+
+.product-left img {
+    height: 400px;
+    max-width: 400px;
+}
+
+.product-left {
+    height: 400px;
+    max-width: 400px;
+}
+
+.product-right {
+    height: 400px;
+    max-width: 400px;
+}
+
+.product-right h1 {
+    font-family: LightRock;
+    font-size: 80px;
+    font-weight: 100;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.product-right h2 {
+    font-weight: 300;
+    margin-bottom: -10px;
+}
+
+.product-right a {
+    text-decoration: none;
+    color: #121212
+}
+
+.i-soldout {
+    margin-top: auto;
+}
+
+@media (max-width: 1024px) {
+    .product-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 70px;
+    }
+
+    .product-right {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 640px) {
+    .product-container {
+        margin-bottom: 0px;
+    }
+
+    .product-left img {
+        max-width: 250px;
+        height: 250px;
+    }
+
+    .product-left {
+        max-width: 250px;
+        height: 250px;
+    }
+
+    .product-right {
+        max-width: 250px;
+    }
+
+    .product-right h1 {
+        font-size: 50px;
+        margin-bottom: -10px;
+    }
+}
+
+.cart-content {
+    color: #121212;
+    height: 55vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    margin-bottom: 120px;
+}
+
+.cart-content h1 {
+    font-family: LightRock;
+    font-size: 60px;
+    font-weight: 100;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.cart-content a {
+    text-decoration: none;
+    color: #121212;
+}
+
+@media (max-width: 1024px) {
+    .cart-content {
+        height: 60vh;
+    }
+
+    .cart-content h1 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 640px) {
+    .cart-content h1 {
+        font-size: 30px;
+    }
+}
+
 .footer {
     background-color: #121212;
     display: flex;
     justify-content: space-around;
     align-items: center;
     text-align: center;
-    height: 30vh;
     width: 100%;
+    padding: 40px 20px;
+    box-sizing: border-box;
 }
 
 .footer-content {
@@ -332,6 +630,7 @@ this at the bottom. */
     z-index: -5;
     transform: translateX(5%);
     transition: z-index 0.2s, opacity 0.3s, transform 0.5s ease;
+    overflow: hidden;
 }
 
 .burgerreveal.show {
