@@ -39,6 +39,12 @@ license for this font, and can provide evidence if needed. */
     align-items: center;
 }
 
+@media (max-width:640px) {
+    .hero {
+        padding: 52.5px;
+    }
+}
+
 .header {
     background-color: #F9F9F9;
     padding: 70px;
@@ -177,6 +183,7 @@ probably not proper though... sorry! */
     font-weight: 100;
     font-size: 80px;
     transition: all 0.3s ease;
+    margin-bottom: 40px;
 }
 
 .gallery-text a {
@@ -185,8 +192,12 @@ probably not proper though... sorry! */
     transition: all 0.3s ease;
 }
 
-.gallery-text h1:hover {
-    transform: translateY(-4px);
+.gallery-text {
+    transition: all 0.3s ease;
+}
+
+.gallery-text:hover {
+    transform: scale(0.97);
 }
 
 /* SLIDER ANIMATION START */
@@ -322,7 +333,7 @@ load the showcase without stuttering. */
 .shop {
     width: 80%;
     display: grid;
-    grid-template-columns: repeat(3, 250px);
+    grid-template-columns: repeat(3, 220px);
     justify-content: center;
     gap: 2rem 4rem;
     color: #121212;
@@ -358,12 +369,11 @@ load the showcase without stuttering. */
     flex-direction: row;
     justify-content: space-between;
     gap: 5rem;
-    padding: 70px;
+    padding: 40px;
     max-width: 900px;
     margin: 0 auto;
     width: 100%;
     box-sizing: border-box;
-
 }
 
 .formleft {
@@ -386,6 +396,57 @@ load the showcase without stuttering. */
     display: flex;
     flex-direction: column;
     flex: 1;
+    margin-bottom: 30px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+    padding: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-right {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-bottom: 30px;
+}
+
+.contact-left {
+    color: #121212;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-left h1 {
+    font-size: 50px;
+    font-weight: 100;
+    font-family: LightRock;
+    margin-top: 0;
+    margin-bottom: 0px;
+}
+
+.contact-container button {
+    cursor: pointer;
+    background-color: #F9F9F9;
+    border: none;
+    border-bottom: 1px solid #493780;
+    color: #493780;
+    padding: 10px 0;
+    font-size: 14px;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.contact-container button:hover {
+    opacity: 70%;
 }
 
 form {
@@ -396,7 +457,7 @@ form {
 }
 
 input {
-    padding: 10px;
+    padding: 10px 0;
     background-color: #F9F9F9;
     color: #121212;
     border: none;
@@ -404,6 +465,17 @@ input {
     font-size: 14px;
     font-weight: 200;
     box-sizing: border-box;
+}
+
+textarea {
+    padding: 20px;
+    background-color: #F9F9F9;
+    font-family: Inter;
+    box-sizing: border-box;
+    border: 1px solid #121212;
+    height: 150px;
+    font-size: 14px;
+    font-weight: 200;
 }
 
 select {
@@ -418,14 +490,14 @@ select {
     border: none;
     border-bottom: 1px solid #493780;
     color: #493780;
-    padding: 10px;
+    padding: 10px 0;
     font-size: 14px;
     text-align: left;
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
 }
 
 .formcontent button:hover {
-    opacity: 75%;
+    opacity: 70%;
 }
 
 @media (max-width: 1024px) {
@@ -438,6 +510,23 @@ select {
         margin-bottom: 60px;
         text-align: center;
     }
+
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        gap: 2rem;
+        padding: 0px;
+        margin-bottom: 60px;
+        text-align: center;
+    }
+
+    .contact-right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
 
     .formright {
         display: flex;
@@ -462,7 +551,23 @@ select {
     .formleft h1 {
         font-size: 50px;
     }
+
+    .contact-right {
+        width: 70%;
+    }
+
+    .contact-left {
+        width: 70%;
+    }
+
+    .contact-left h1 {
+        font-size: 50px;
+    }
 }
+
+/* I quite honestly don't know if this is doing
+anything, but the page doesn't look that bad, so
+I'm happy :-) */
 
 
 label {
@@ -478,6 +583,12 @@ label {
 }
 
 #eventMessage {
+    margin-top: 12px;
+    color: #493780;
+    font-weight: 300;
+}
+
+#contactMessage {
     margin-top: 12px;
     color: #493780;
     font-weight: 300;
@@ -652,25 +763,92 @@ that's because thought i could only use
     }
 }
 
+.about-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: #121212;
+    padding: 70px auto;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 120px;
+}
+
+.about-left {
+    height: 400px;
+    max-width: 400px;
+}
+
+.about-left h1 {
+    font-family: LightRock;
+    font-size: 60px;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+
+.about-right {
+    margin-top: 40px;
+    max-width: 400px;
+}
+
+.about-right video {
+    max-width: 400px;
+}
+
+@media (max-width: 1024px) {
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 640px) {
+    .about-container h1 {
+        font-size: 50px;
+    }
+
+    .about-right video {
+        max-width: 250px;
+    }
+
+    .about-right {
+        margin-top: 0px;
+        max-width: 250px;
+    }
+
+    .about-left {
+        height: 420px;
+        max-width: 250px;
+        font-size: 14px;
+    }
+}
+
 /* Footer start */
 
 .footer {
     background-color: #121212;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
     width: 100%;
-    padding: 40px 20px;
+    padding: 60px 20px;
     box-sizing: border-box;
 }
 
+.footer-again {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px;
+}
+
 .footer-content {
-    width: 100%;
-    padding: 20px;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #F9F9F9;
+}
+
+.footer-left {
+    display: flex;
+    align-items: flex-start;
 }
 
 .footer-left img {
@@ -678,15 +856,59 @@ that's because thought i could only use
 }
 
 .footer-right {
-    width: 7rem;
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: 130px 130px 130px;
+    margin-bottom: 60px;
+    text-align: left;
+}
+
+.footer-right a {
+    text-decoration: none;
+    color: #F9F9F9
+}
+
+.footer-under {
+    margin-top: 60px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: space-around;
+    font-size: 14px;
+    line-height: 30%;
+    text-align: right;
+}
+
+.footer-under a {
+    text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+    .footer-right {
+        grid-template-columns: 60px 60px 60px;
+    }
 }
 
 @media (max-width: 640px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-right {
+        display: flex;
+        flex-direction: column;
+        grid-gap: 20px;
+    }
+
     .footer-left img {
-        max-width: 70%;
+        max-width: 85%;
+    }
+
+    .footer-under {
+        flex-direction: column;
+        font-size: 10px;
+        text-align: center;
+        gap: 10px;
     }
 }
 
