@@ -151,7 +151,7 @@ license for this font, and can provide evidence if needed. */
 /* was having trouble adding padding to
 the about us section, i put the content
 into another div and it resolved my issue.
-probably not proper though... sorry! */
+probably not proper though... sorry.. */
 
 .gallery {
     position: relative;
@@ -436,15 +436,25 @@ load the showcase without stuttering. */
 }
 
 .contact-container button {
+    position: relative;
     cursor: pointer;
     background-color: #F9F9F9;
     border: none;
-    border-bottom: 1px solid #493780;
     color: #493780;
     padding: 10px 0;
     font-size: 14px;
     text-align: left;
     transition: all 0.3s ease;
+}
+
+.contact-container button::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 17.5%;
+    height: 1px;
+    background-color: #493780;
 }
 
 .contact-container button:hover {
@@ -488,15 +498,25 @@ select {
 }
 
 .formcontent button {
+    position: relative;
     cursor: pointer;
     background-color: #F9F9F9;
     border: none;
-    border-bottom: 1px solid #493780;
     color: #493780;
     padding: 10px 0;
     font-size: 14px;
     text-align: left;
     transition: all 0.3s ease;
+}
+
+.formcontent button::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 17.5%;
+    height: 1px;
+    background-color: #493780;
 }
 
 .formcontent button:hover {
@@ -1092,13 +1112,13 @@ that's because thought i could only use
 .burgerreveal.show {
     transform: translateX(0);
     opacity: 1;
-    z-index: 5;
+    z-index: 10;
 }
 
-/* z-index transition is causing lag in
-my live preview, but is seemingly the
+/* z-index transition might be causing lag
+in my live preview, but is seemingly the
 easiest way to achieve the transition
-i want */
+i want :') */
 
 .burgerreveal nav {
     display: flex;
