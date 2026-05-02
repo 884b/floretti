@@ -45,7 +45,6 @@ license for this font, and can provide evidence if needed. */
 }
 
 .header {
-    background-color: #F9F9F9;
     padding: 70px;
     height: 60px;
     display: flex;
@@ -183,6 +182,10 @@ probably not proper though... sorry! */
     font-size: 80px;
     transition: all 0.3s ease;
     margin-bottom: 40px;
+}
+
+.event-verh1 h1 {
+    margin-bottom: 20px;
 }
 
 .gallery-text a {
@@ -763,6 +766,13 @@ that's because thought i could only use
     }
 }
 
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 200%;
+    z-index: -1;
+}
+
 .about-container {
     display: flex;
     flex-direction: row;
@@ -774,11 +784,15 @@ that's because thought i could only use
     width: 100%;
     box-sizing: border-box;
     margin-bottom: 120px;
+    z-index: 3;
 }
 
 .about-left {
     height: 400px;
     max-width: 400px;
+    padding: 16px;
+    background-color: #F9F9F9;
+
 }
 
 .about-left h1 {
@@ -825,6 +839,138 @@ that's because thought i could only use
     }
 }
 
+.slideshow-text {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    max-width: 80%;
+    margin: 0 auto;
+    color: #121212;
+}
+
+.slideshow-text a {
+    text-decoration: none;
+    color: #121212;
+}
+
+.slideshow-text h1 {
+    font-family: LightRock;
+    font-size: 60px;
+    font-weight: 100;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+@media (max-width: 640px) {
+    .slideshow-text a {
+        font-size: 12px;
+    }
+
+    .slideshow-text h1 {
+        font-size: 36px;
+    }
+}
+
+.slideshow-container {
+    max-width: 80%;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: 100;
+    font-size: 36px;
+    user-select: none;
+    transition: all 0.4s ease;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    transform: scale(0.85);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 5px;
+    width: 5px;
+    margin: 0 4px;
+    background-color: #E7DFFF;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    margin-bottom: 70px;
+    margin-top: 20px;
+}
+
+.active,
+.dot:hover {
+    background-color: #493780;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.slideshow-end {
+    text-align: center;
+    color: #121212;
+    margin-bottom: 40px;
+}
+
 /* Footer start */
 
 .footer {
@@ -865,7 +1011,12 @@ that's because thought i could only use
 
 .footer-right a {
     text-decoration: none;
-    color: #F9F9F9
+    color: #F9F9F9;
+    transition: all 0.3s ease;
+}
+
+.footer-right a:hover {
+    color: #FFF4B3;
 }
 
 .footer-under {
@@ -880,6 +1031,12 @@ that's because thought i could only use
 
 .footer-under a {
     text-decoration: none;
+    color: #F9F9F9;
+    transition: all 0.3s ease;
+}
+
+.footer-under a:hover {
+    color: #FFF4B3;
 }
 
 @media (max-width: 1024px) {
