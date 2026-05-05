@@ -27,7 +27,7 @@ Links to other parts of this assignment:
     FigJam : https://www.figma.com/board/diJCmJfM5rDBNlv5CaNT7y/BEN-HAYASHI---Interaction-Design-II?node-id=0-1&t=PdQxjbCVTGhHkQwC-1
     Figma : https://www.figma.com/design/T07l2VYfK0193I77oDpREQ/BEN-HAYASHI----Interaction-Design-II--Prototyping-?node-id=0-1&t=Bb4sZfpbZpKEowYi-1
     CodePen : https://codepen.io/benimin
-    GitHub : https://github.com/deaconhillman/floretti (yes, this is my account-- sorry about the name..)
+    GitHub : https://github.com/884b/floretti
 
 Please let me know if any content cannot be accessed, or if you need clarification on anything.
 
